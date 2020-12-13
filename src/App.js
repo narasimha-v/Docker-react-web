@@ -6,7 +6,7 @@ function App() {
 		<div className='App'>
 			<header className='App-header'>
 				<img src={logo} className='App-logo' alt='logo' />
-				<p>CI test using travis CI</p>
+				<p>CI with travis CI and deployed to AWS beanstalk</p>
 				<a
 					className='App-link'
 					href='https://reactjs.org'
