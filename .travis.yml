@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true narasimhaconnect/docker-react-web npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  regoin: "us-east-2"
+  app: "docker-react-web"
+  env: "DockerReactWeb-env"
+  bucket_name: "elasticbeanstalk-us-east-2-229894503369"
+  bucket_path: "docker-react-web"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
